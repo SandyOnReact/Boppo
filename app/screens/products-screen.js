@@ -12,9 +12,10 @@ export const ProductsScreen = () => {
       tabBarOptions={{
         labelStyle: { textTransform: 'none', fontSize: 14 },
         tabStyle: styles.tabStyle,
-        indicatorStyle: styles.indicatorStyle,
         style: styles.tabBarStyle,
-        activeTintColor: 'blue',
+        activeTintColor: 'black',
+        inactiveTintColor: 'black',
+        indicatorContainerStyle: styles.indicatorStyle,
       }}>
       <Tab.Screen name="Food" component={FoodScreen} />
       <Tab.Screen name="Drinks" component={DrinkScreen} />
@@ -24,16 +25,15 @@ export const ProductsScreen = () => {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    backgroundColor: 'aqua',
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 10,
-    marginTop: 5,
+    marginTop: 15,
     opacity: 0.5,
   },
   indicatorStyle: {
-    backgroundColor: 'blue',
-    width: 0,
+    backgroundColor: 'lightskyblue',
+    width: '100%',
   },
   tabStyle: {
     paddingLeft: 10,
